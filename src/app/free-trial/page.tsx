@@ -160,6 +160,10 @@ export default function FreeTrialPage() {
                   Call us
                 </a>
               </div>
+              <Link href="/pricing" className="link-underline mt-4 inline-flex">
+                Already decided? See monthly fee plans
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
             </div>
           </Reveal>
         </div>

@@ -79,6 +79,10 @@ export default function CoursesPage() {
               Not sure where to begin? Book a free assessment — your teacher will recommend the right
               starting point after the first lesson.
             </p>
+            <Link href="/pricing" className="link-underline">
+              See monthly fee plans
+              <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
           </div>
         </div>
       </section>

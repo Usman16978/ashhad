@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import { Facebook, Instagram, Mail, MapPin, Phone, WhatsApp } from "./Icons";
-import { navLinks, site, whatsappLink } from "@/lib/site";
+import { allNavLinks, site, whatsappLink } from "@/lib/site";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -41,7 +41,7 @@ export default function Footer() {
               Explore
             </h3>
             <ul className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1">
-              {navLinks.map((link) => (
+              {allNavLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}

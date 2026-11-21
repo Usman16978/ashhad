@@ -39,7 +39,19 @@ export const whatsappLink = (message?: string) =>
     message ?? `Assalamu alaikum ${site.name}, I would like to book a free trial class.`
   )}`;
 
+/** Compact desktop navigation — kept to the original seven links. */
 export const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/courses", label: "Courses" },
+  { href: "/teaching-method", label: "Teaching Method" },
+  { href: "/activities", label: "Activities" },
+  { href: "/testimonials", label: "Testimonials" },
+  { href: "/contact", label: "Contact" },
+];
+
+/** All primary pages, including Fee Plans — used in the mobile drawer and footer. */
+export const allNavLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/courses", label: "Courses" },

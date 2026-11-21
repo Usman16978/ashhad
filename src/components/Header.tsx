@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
 import { ArrowRight, Close, Mail, Menu, Phone, Sparkle } from "./Icons";
-import { navLinks, site } from "@/lib/site";
+import { allNavLinks, navLinks, site } from "@/lib/site";
 
 export default function Header() {
   const pathname = usePathname();
@@ -150,7 +150,7 @@ export default function Header() {
 
           <nav aria-label="Mobile navigation" className="flex-1 px-6 py-6">
             <ul className="space-y-0.5">
-              {navLinks.map((link, i) => (
+              {allNavLinks.map((link, i) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}

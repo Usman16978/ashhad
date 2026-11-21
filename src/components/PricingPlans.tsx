@@ -9,17 +9,26 @@ export default function PricingPlans({ showHead = true }: { showHead?: boolean }
   return (
     <div>
       {showHead ? (
-        <Reveal>
-          <SectionHead
-            eyebrow="Fee plans"
-            title={
-              <>
-                Start free. <em className="italic text-brass-600">Grow steadily.</em>
-              </>
-            }
-            description="Begin with three free classes. If it feels right, choose the weekly plan that suits your family — 1-on-1 live lessons on Zoom, every time."
-          />
-        </Reveal>
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+          <Reveal>
+            <SectionHead
+              align="left"
+              eyebrow="Fee plans"
+              title={
+                <>
+                  Start free. <em className="italic text-brass-600">Grow steadily.</em>
+                </>
+              }
+              description="Begin with three free classes. If it feels right, choose the weekly plan that suits your family — 1-on-1 live lessons on Zoom, every time."
+            />
+          </Reveal>
+          <Reveal delay={80}>
+            <Link href="/pricing" className="link-underline shrink-0 sm:mb-1">
+              Full fee plans guide
+              <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </Reveal>
+        </div>
       ) : null}
 
       <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
