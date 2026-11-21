@@ -43,11 +43,101 @@ export const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/courses", label: "Courses" },
+  { href: "/pricing", label: "Fee Plans" },
   { href: "/teaching-method", label: "Teaching Method" },
   { href: "/activities", label: "Activities" },
   { href: "/testimonials", label: "Testimonials" },
   { href: "/contact", label: "Contact" },
 ];
+
+export type Plan = {
+  id: string;
+  name: string;
+  priceUsd: number;
+  priceGbp: number;
+  schedule: string;
+  duration: string;
+  platform: string;
+  description: string;
+  features: string[];
+  featured?: boolean;
+};
+
+export const plans: Plan[] = [
+  {
+    id: "free-trial",
+    name: "Free Trial",
+    priceUsd: 0,
+    priceGbp: 0,
+    schedule: "3 classes",
+    duration: "30 Mins Per Class",
+    platform: "1-on-1 Zoom Class",
+    description: "Meet your teacher and experience a real lesson before you decide anything.",
+    features: [
+      "3 complete one-to-one lessons",
+      "No card details required",
+      "Level assessment & honest advice",
+      "Choose male or female teacher",
+      "All time zones",
+    ],
+  },
+  {
+    id: "basic-starter",
+    name: "Basic Starter Plan",
+    priceUsd: 25,
+    priceGbp: 20,
+    schedule: "2 Days a Week",
+    duration: "30 Mins Per Class",
+    platform: "1-on-1 Zoom Class",
+    description: "A smooth start with basic Qaida and Nazara Qur'an — ideal for busy children or beginners.",
+    features: [
+      "8 one-to-one classes a month",
+      "Noorani Qaida & Nazara Qur'an",
+      "Personal learning plan",
+      "Monthly progress report",
+      "Direct WhatsApp support",
+    ],
+  },
+  {
+    id: "standard-popular",
+    name: "Standard Popular Plan",
+    priceUsd: 35,
+    priceGbp: 30,
+    schedule: "3 Days a Week",
+    duration: "30 Mins Per Class",
+    platform: "1-on-1 Zoom Class",
+    description: "Our most recommended plan for steady progress in Nazra, Tajweed mastery and daily Masnoon Duas.",
+    features: [
+      "12 one-to-one classes a month",
+      "Nazra, Tajweed & Masnoon Duas",
+      "Priority teacher matching",
+      "Lesson recordings on request",
+      "Fortnightly progress updates",
+    ],
+    featured: true,
+  },
+  {
+    id: "premium-intensive",
+    name: "Premium Intensive Plan",
+    priceUsd: 50,
+    priceGbp: 45,
+    schedule: "5 Days a Week",
+    duration: "30 Mins Per Class",
+    platform: "1-on-1 Zoom Class",
+    description: "For families who want faster, consistent progress with the closest teacher support.",
+    features: [
+      "20 one-to-one classes a month",
+      "Tajweed, Hifz & Tafseer tracks",
+      "Daily sabaq and revision plan",
+      "Weekly written reports",
+      "Priority scheduling & support",
+    ],
+  },
+];
+
+export function getPlan(id?: string) {
+  return plans.find((p) => p.id === id);
+}
 
 export const stats = [
   { value: "500+", label: "Students worldwide" },

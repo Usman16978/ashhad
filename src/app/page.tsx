@@ -5,6 +5,7 @@ import QuranHeroArt from "@/components/QuranHeroArt";
 import QuranArtwork from "@/components/QuranArtwork";
 import PhotoCard from "@/components/PhotoCard";
 import CourseCard from "@/components/CourseCard";
+import PricingPlans from "@/components/PricingPlans";
 import Reveal from "@/components/Reveal";
 import TestimonialCard from "@/components/TestimonialCard";
 import { CtaBand, SectionHead, Stars, Tick } from "@/components/ui";
@@ -245,6 +246,13 @@ export default function HomePage() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ───────────────────────── Fee plans ───────────────────────── */}
+      <section className="section border-y border-ivory-300 bg-ivory-50">
+        <div className="container-x">
+          <PricingPlans />
         </div>
       </section>
 
