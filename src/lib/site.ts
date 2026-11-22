@@ -77,23 +77,6 @@ export type Plan = {
 
 export const plans: Plan[] = [
   {
-    id: "free-trial",
-    name: "Free Trial",
-    priceUsd: 0,
-    priceGbp: 0,
-    schedule: "3 classes",
-    duration: "30 Mins Per Class",
-    platform: "1-on-1 Zoom Class",
-    description: "Meet your teacher and experience a real lesson before you decide anything.",
-    features: [
-      "3 complete one-to-one lessons",
-      "No card details required",
-      "Level assessment & honest advice",
-      "Choose male or female teacher",
-      "All time zones",
-    ],
-  },
-  {
     id: "basic-starter",
     name: "Basic Starter Plan",
     priceUsd: 25,
