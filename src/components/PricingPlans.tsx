@@ -37,14 +37,18 @@ export default function PricingPlans({ showHead = true }: { showHead?: boolean }
         </div>
       ) : null}
 
-      <div className="mt-10 grid gap-5 md:grid-cols-3">
+      <div className="-mx-5 mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 md:mx-0 md:mt-10 md:grid md:grid-cols-3 md:gap-5 md:overflow-visible md:px-0 md:pb-0">
         {plans.map((plan, i) => {
           const featured = !!plan.featured;
 
           return (
-            <Reveal key={plan.id} delay={i * 90} className="h-full">
+            <Reveal
+              key={plan.id}
+              delay={i * 90}
+              className="h-full w-[84%] min-w-[84%] shrink-0 snap-center sm:w-[60%] sm:min-w-[60%] md:w-auto md:min-w-0 md:shrink"
+            >
               <article
-                className={`ornate relative flex h-full flex-col overflow-hidden rounded-[12px] p-6 transition duration-500 hover:-translate-y-1 ${
+                className={`ornate relative flex h-full flex-col overflow-hidden rounded-[12px] p-5 transition duration-500 hover:-translate-y-1 sm:p-6 ${
                   featured
                     ? "bg-forest-950 text-ivory-100 shadow-[0_30px_60px_-36px_rgba(8,36,30,0.75)] ring-1 ring-brass-400/40"
                     : "border border-ivory-300 bg-ivory-50 hover:border-brass-400/70 hover:shadow-[0_24px_50px_-34px_rgba(8,36,30,0.45)]"
@@ -129,6 +133,15 @@ export default function PricingPlans({ showHead = true }: { showHead?: boolean }
           );
         })}
       </div>
+
+      {showHead ? (
+        <div className="mt-1 flex justify-center md:hidden">
+          <Link href="/pricing" className="btn btn-outline w-full max-w-xs">
+            Compare all plans
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
+      ) : null}
 
       <Reveal>
         <div className="mt-8 flex flex-col items-center gap-2 text-center">
