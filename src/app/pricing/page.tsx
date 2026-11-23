@@ -40,7 +40,7 @@ export default function PricingPage() {
 
       <section className="section bg-ivory-50">
         <div className="container-x">
-          <PricingPlans showHead={false} />
+          <PricingPlans showHead={false} layout="stack" />
         </div>
       </section>
 
